@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import * as stylex from "@stylexjs/stylex";
 
 export default function Home() {
   return (
@@ -14,7 +15,7 @@ export default function Home() {
           priority
         />
         <ol>
-          <li>
+          <li {...stylex.props(testStyles.test)}>
             Get started by editing <code>src/app/page.tsx</code>.
           </li>
           <li>Save and see your changes instantly.</li>
@@ -93,3 +94,10 @@ export default function Home() {
     </div>
   );
 }
+
+const testStyles = stylex.create({
+  test: {
+    color: 'blue',
+    background: 'pink',
+  }
+}); 

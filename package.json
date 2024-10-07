@@ -8,9 +8,12 @@
     "start": "next start",
     "lint": "next lint",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "predev": "rimraf .next",
+    "prebuild": "rimraf .next"
   },
   "dependencies": {
+    "@stylexjs/stylex": "^0.8.0",
     "next": "14.2.14",
     "react": "^18",
     "react-dom": "^18"
@@ -25,12 +28,17 @@
     "@storybook/nextjs": "^8.3.5",
     "@storybook/react": "^8.3.5",
     "@storybook/test": "^8.3.5",
+    "@stylexjs/babel-plugin": "^0.8.0",
+    "@stylexjs/dev-runtime": "^0.8.0",
+    "@stylexjs/eslint-plugin": "^0.8.0",
+    "@stylexjs/nextjs-plugin": "^0.8.0",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",
     "eslint-config-next": "14.2.14",
     "eslint-plugin-storybook": "^0.9.0",
+    "rimraf": "^6.0.1",
     "storybook": "^8.3.5",
     "typescript": "^5"
   }
