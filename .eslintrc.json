@@ -38,12 +38,7 @@
     ],
     "space-in-parens": [
       "error",
-      "never",
-      {
-        "exceptions": [
-          "empty"
-        ]
-      }
+      "never"
     ],
     "object-curly-spacing": [
       "error",
