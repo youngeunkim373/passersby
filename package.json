@@ -9,6 +9,7 @@
     "lint": "next lint",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
+    "chromatic": "npx chromatic --project-token=chpt_99782e4ed4c662a",
     "predev": "rimraf .next",
     "prebuild": "rimraf .next"
   },
@@ -36,6 +37,7 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.4.20",
+    "chromatic": "^11.12.5",
     "eslint": "^8.57.1",
     "eslint-config-next": "^14.2.14",
     "eslint-config-prettier": "^9.1.0",
