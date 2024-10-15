@@ -13,9 +13,10 @@ module.exports = {
   theme: {
     colors: {
       'main': {
-        light: '#e9d5ff',
+        pale: '#faf5ff',
+        light: '#d8b4fe',
         DEFAULT: '#9000ff',
-        dark: '#5b21b6',
+        dark: '#7e22ce',
       },
       'white': '#ffffff',
       'black': '#000000',
@@ -33,12 +34,14 @@ module.exports = {
         950: '#020617',
       },
       'blue': {
-        light: '#bfdbfe',
+        pale: '#eff6ff',
+        light: '#93c5fd',
         DEFAULT: '#3b82f6',
-        dark: '#1d4ed8',
+        dark: '#2563eb',
       },
       'red': {
-        light: '#fecdd3',
+        pale: '#fff1f2',
+        light: '#fda4af',
         DEFAULT: '#f43f5e',
         dark: '#e11d48',
       },
@@ -48,8 +51,8 @@ module.exports = {
 };
 
 export type Colors = 
-  'main' | 'main-light' | 'main-dark' | 
+  'main' | 'main-pale' | 'main-light' | 'main-dark' | 
   'white' | 'black' | 
   'gray-50'| 'gray-100'| 'gray-200'| 'gray-300'| 'gray-400' | 'gray-500'| 'gray-600'| 'gray-700'| 'gray-800'| 'gray-900'| 'gray-950' | 
-  'red' | 'red-light' | 'red-dark' | 
-  'blue' | 'blue-light' | 'blue-dark';
+  'red' | 'red-pale' | 'red-light' | 'red-dark' | 
+  'blue' | 'blue-pale' | 'blue-light' | 'blue-dark';
