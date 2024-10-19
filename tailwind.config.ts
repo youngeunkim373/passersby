@@ -45,6 +45,12 @@ module.exports = {
         DEFAULT: '#f43f5e',
         dark: '#e11d48',
       },
+      'orange': {
+        pale: '#fff7ed',
+        light: '#fed7aa',
+        DEFAULT: '#fb923c',
+        dark: '#f97316',
+      },
       'transparent': 'transparent'
     }, 
     extend: {
@@ -60,4 +66,5 @@ export type Colors =
   'white' | 'black' | 
   'gray-50'| 'gray-100'| 'gray-200'| 'gray-300'| 'gray-400' | 'gray-500'| 'gray-600'| 'gray-700'| 'gray-800'| 'gray-900'| 'gray-950' | 
   'red' | 'red-pale' | 'red-light' | 'red-dark' | 
+  'orange' | 'orange-pale' | 'orange-light' | 'orange-dark' | 
   'blue' | 'blue-pale' | 'blue-light' | 'blue-dark';
