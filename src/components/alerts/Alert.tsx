@@ -25,7 +25,7 @@ export function Alert({
   closalble = true,
   duration = 3000,
   icon, 
-  showIcon,
+  showIcon = true,
   isVisible,
   close, 
 }: Props) {
@@ -41,10 +41,12 @@ export function Alert({
       {showIcon && <div className={style.icon}>{icon ?? internalIcon}</div>}
 
       <div>
-        <span className={style.title}>{title}</span>
-        <div className={style.content}>
-          {content} 
-        </div>
+        <div className={style.title}>{title}</div>
+        {content && (
+          <div className={style.content}>
+            {content} 
+          </div>
+        )}
       </div>
 
       {closalble && (
