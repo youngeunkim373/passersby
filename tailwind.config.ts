@@ -45,8 +45,13 @@ module.exports = {
         DEFAULT: '#f43f5e',
         dark: '#e11d48',
       },
+      'transparent': 'transparent'
     }, 
-    extend: {},
+    extend: {
+      ringWidth: {
+        '1.3': '1.3px',
+      },
+    },
   },
 };
 
