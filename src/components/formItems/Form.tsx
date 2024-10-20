@@ -4,7 +4,7 @@ import { FieldError, FieldErrors, FieldValues } from 'react-hook-form';
 import { FormItem, FormItemProps } from '@/components/formItems/FormItem';
 
 export interface Props<TFormValues extends FieldValues> extends FormHTMLAttributes<HTMLFormElement> {
-  button: ReactNode;
+  button?: ReactNode;
   errors: FieldErrors<TFormValues>;
   items: FormItemProps[];
   onSubmit: () => void;
