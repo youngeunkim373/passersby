@@ -63,3 +63,11 @@ const Template: StoryFn<FieldValues> = () => {
 };
 
 export const Default = Template.bind({});
+
+Default.argTypes = {
+  name: { control: false },
+  label: { control: false },
+  isRequired: { control: false },
+  error: { control: false },
+  helper: { control: false },
+};
