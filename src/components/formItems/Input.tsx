@@ -1,4 +1,4 @@
-import { InputHTMLAttributes, ReactNode } from 'react';
+import { forwardRef, InputHTMLAttributes, ReactNode } from 'react';
 
 type InputSize = 'small' | 'default' | 'large';
 type InputState = 'normal' | 'error' | 'success';
@@ -10,7 +10,7 @@ export interface Props extends Omit<InputHTMLAttributes<HTMLInputElement>, 'size
   suffix?: ReactNode | string; 
 }
 
-export function Input({ 
+export const Input = forwardRef<HTMLInputElement, Props>(({ 
   // custom
   size, 
   state, 
@@ -20,7 +20,7 @@ export function Input({
   disabled = false,
   type,
   ...inputProps
-}: Props) {  
+}, ref) => {  
   const style = getStyle({ disabled, size, state });
 
   return (
@@ -30,12 +30,13 @@ export function Input({
         className={style.input}
         disabled={disabled}
         type={type ?? 'text'}
+        ref={ref}
         {...inputProps}
       />
       <div className={style.fixCommon + style.suffix}>{suffix}</div>
     </div>
   );
-}
+});
 
 const inputConfig = {
   size: {
@@ -88,4 +89,3 @@ const getStyle = ({
   prefix: 'mr-1.5',
   suffix: 'ml-1.5',
 });
-  
