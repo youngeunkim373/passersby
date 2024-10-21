@@ -1,7 +1,8 @@
 import { Meta, StoryFn } from '@storybook/react';
+
 import { Button, Props as ButtonProps } from '@/components/buttons/Button';
+import { Notification } from '@/components/notifications/Notification';
 import useVisible from '@/hooks/useVisible';
-import { Alert } from '@/components/alerts/Alert';
 
 export default {
   component: Button,
@@ -17,7 +18,7 @@ const Template: StoryFn<ButtonProps> = ({ children, ...rest }) => {
         <Button {...rest} onClick={open}>{children}</Button>
       </div>
 
-      <Alert
+      <Notification
         title={'You clicked the button!'} 
         type={'success'} 
         duration={1000}

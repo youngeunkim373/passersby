@@ -6,10 +6,11 @@ import { Close, CloseSolidCircle as Error } from '@/assets/icons/Close';
 import { ExclamationMarkSolidCircle as ExclamationMark } from '@/assets/icons/ExclamationMark';
 import { InfoSolidCircle as Info } from '@/assets/icons/Info';
 
-type AlertType = 'info' | 'success' | 'danger' | 'warning';
+/* ---------- Notification component ---------- */
+type NotificationType = 'info' | 'success' | 'danger' | 'warning';
 
 export interface Props extends Pick<VisibleSet, 'isVisible' | 'close'> {
-  type?: AlertType;
+  type?: NotificationType;
   title: string;
   content?: string;
   closalble?: boolean;
@@ -18,7 +19,7 @@ export interface Props extends Pick<VisibleSet, 'isVisible' | 'close'> {
   showIcon?: boolean;
 }
 
-export function Alert({ 
+export function Notification({ 
   type = 'info', 
   title, 
   content, 
@@ -37,7 +38,7 @@ export function Alert({
   if(!isVisible) return <></>;
 
   return (
-    <div className={style.wrapper} role={'alert'}>
+    <div className={style.wrapper} role={'Notification'}>
       {showIcon && <div className={style.icon}>{icon ?? internalIcon}</div>}
 
       <div>
@@ -61,7 +62,7 @@ export function Alert({
   );
 }
 
-const getIcon = ({ type }: {type: AlertType}) => {
+const getIcon = ({ type }: {type: NotificationType}) => {
   switch(type) {
   case 'info':
     return <Info />;
@@ -76,7 +77,7 @@ const getIcon = ({ type }: {type: AlertType}) => {
   }
 };
 
-const alertConfig = {
+const NotificationConfig = {
   info: 'bg-main-pale text-main border-main',
   success: 'bg-blue-pale text-blue border-blue',
   danger: 'bg-red-pale text-red border-red',
@@ -99,7 +100,7 @@ const getStyle = ({ type = 'info' }: Pick<Props, 'type'>) => ({
     -translate-x-1/2 
     w-[calc(100%-2rem)]
     z-50
-    ${alertConfig[type]}
+    ${NotificationConfig[type]}
   `,
   icon: `
     flex-shrink-0 

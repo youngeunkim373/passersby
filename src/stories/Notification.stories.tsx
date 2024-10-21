@@ -1,12 +1,12 @@
 import { Meta, StoryFn } from '@storybook/react';
 
-import { Alert, Props as AlertProps } from '@/components/alerts/Alert';
+import { Notification, Props as NotificationProps } from '@/components/notifications/Notification';
 import { Button } from '@/components/buttons/Button';
 import useVisible from '@/hooks/useVisible';
 
 export default {
-  component: Alert,
-  title: 'Components/Alert/Alert',
+  component: Notification,
+  title: 'Components/Notification/Notification',
   argTypes: {
     duration: {
       control: { type: 'select' },
@@ -16,9 +16,9 @@ export default {
       control: { type: 'boolean' },
     },
   },
-} as Meta<typeof Alert>;
+} as Meta<typeof Notification>;
 
-const Template: StoryFn<AlertProps> = ({ icon, ...rest }) => {
+const Template: StoryFn<NotificationProps> = ({ icon, ...rest }) => {
   const { open, ...restVisibleSet } = useVisible(rest.showIcon);
   const iconSet = icon ? <>🐋</> : undefined; 
 
@@ -32,7 +32,7 @@ const Template: StoryFn<AlertProps> = ({ icon, ...rest }) => {
         </Button>
       </div>
 
-      <Alert 
+      <Notification 
         {...rest} 
         {...restVisibleSet} 
         icon={iconSet} />
