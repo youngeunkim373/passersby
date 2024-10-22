@@ -1,5 +1,8 @@
 import type { Metadata } from 'next';
-import './globals.css';
+import '@/app/globals.css';
+
+import { Message } from '@/components/notifications/Message';
+import { MessageContextProvider } from '@/contexts/MessageContext';
 
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
@@ -25,7 +28,10 @@ export default function RootLayout({
   return (
     <html lang={'en'}>
       <body>
-        {children}
+        <MessageContextProvider>
+          {children}
+          <Message />
+        </MessageContextProvider>
       </body>
     </html>
   );

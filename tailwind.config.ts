@@ -13,10 +13,10 @@ module.exports = {
   theme: {
     colors: {
       'main': {
-        pale: '#faf5ff',
-        light: '#d8b4fe',
-        DEFAULT: '#9000ff',
-        dark: '#7e22ce',
+        pale: '#ebe1ff',
+        light: '#c7abff',
+        DEFAULT: '#7a37ff',
+        dark: '#6428dd',
       },
       'white': '#ffffff',
       'black': '#000000',

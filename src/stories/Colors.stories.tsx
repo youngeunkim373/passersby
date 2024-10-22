@@ -32,6 +32,7 @@ export const Default = () => {
     <div className={'flex flex-col gap-8'}>
       <Title>Main color</Title>
       <RowFlexBox>
+        <Circle color={'main-pale'} />
         <Circle color={'main-light'} />
         <Circle color={'main'} />
         <Circle color={'main-dark'} />
@@ -39,6 +40,7 @@ export const Default = () => {
 
       <Title>Red</Title>
       <RowFlexBox>
+        <Circle color={'red-pale'} />
         <Circle color={'red-light'} />
         <Circle color={'red'} />
         <Circle color={'red-dark'} />
@@ -46,6 +48,7 @@ export const Default = () => {
 
       <Title>Blue</Title>
       <RowFlexBox>
+        <Circle color={'blue-pale'} />
         <Circle color={'blue-light'} />
         <Circle color={'blue'} />
         <Circle color={'blue-dark'} />
