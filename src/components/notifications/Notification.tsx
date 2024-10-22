@@ -107,10 +107,10 @@ const getStyle = ({ type = 'info' }: Pick<Props, 'type'>) => ({
     h-4
     inline 
     me-3
-    mt-[4px]
+    mt-[6px]
     w-4
   `,
-  title: 'text-lg font-semibold',
+  title: 'text-lg font-semibold mt-[3px]',
   content: 'my-2 text-sm whitespace-pre-line',
   close: `
     h-8
@@ -120,9 +120,6 @@ const getStyle = ({ type = 'info' }: Pick<Props, 'type'>) => ({
     ms-auto
     p-1.5
     rounded-lg
-    text-blue-500
     w-8
-    -mx-1.5
-    -my-1.5
   `,
 });
